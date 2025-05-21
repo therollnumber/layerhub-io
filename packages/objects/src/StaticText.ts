@@ -5,6 +5,9 @@ export class StaticTextObject extends fabric.Textbox {
   public fontURL
   initialize(options: StaticTextOptions) {
     const { text, ...textOptions } = options
+
+    textOptions.editable = false
+
     //@ts-ignore
     super.initialize(text, { ...textOptions })
 
